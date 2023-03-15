@@ -1,6 +1,11 @@
 ﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace APITraining.Session2._1
+namespace APITraining.Session2._2
 {
     internal class CategoryModel
     {
