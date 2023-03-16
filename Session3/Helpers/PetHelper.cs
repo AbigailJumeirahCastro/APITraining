@@ -1,12 +1,9 @@
 ﻿using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using APITraining.Session3.DataModels;
+using APITraining.Session3.Resources;
+using APITraining.Session3.Tests.TestData;
 
-namespace APITraining.Session3
+namespace APITraining.Session3.Helpers
 {
     internal class PetHelper
     {
@@ -17,12 +14,13 @@ namespace APITraining.Session3
         public static async Task<PetModel> AddNewPet(RestClient restClient)
         {
             var newPetData = GeneratePet.pet();
+
             var postRestRequest = new RestRequest(Endpoints.CreateOrUpdatePet());
 
             // Send POST request to add new pet
 
             postRestRequest.AddJsonBody(newPetData);
-            await restClient.ExecutePostAsync<PetModel>(postRestRequest);
+            var postRestResponse = await restClient.ExecutePostAsync<PetModel>(postRestRequest);
 
             // Return created pet data
             return newPetData;

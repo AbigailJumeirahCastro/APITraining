@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using APITraining.Session3.DataModels;
 
-namespace APITraining.Session3
+namespace APITraining.Session3.Tests.TestData
 {
-    internal class GeneratePet
+    public class GeneratePet
     {
         public static PetModel pet()
         {
