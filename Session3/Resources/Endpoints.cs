@@ -1,22 +1,14 @@
-﻿using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace APITraining.Session3.Resources;
 
-namespace APITraining.Session3
+public class Endpoints
 {
-    internal class Endpoints
-    {
 
-        public static readonly string BaseURL = "https://petstore.swagger.io/v2/";
+    public const string BaseURL = "https://petstore.swagger.io/v2/";
 
-        public static readonly string PetEndpoint = "pet";
+    public static string PetEndpoint = "pet";
 
-        public static string FindOrDeletePetById(long petId) => $"{BaseURL}/{PetEndpoint}/{petId}";
+    public static string FindOrDeletePetById(long petId) => $"{BaseURL}{PetEndpoint}/{petId}";
 
-        public static string CreateOrUpdatePet() => $"{BaseURL}/{PetEndpoint}";
+    public static string CreateOrUpdatePet() => $"{BaseURL}{PetEndpoint}";
 
-    }
 }

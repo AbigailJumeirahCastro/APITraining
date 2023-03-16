@@ -1,13 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace APITraining.Session3
+namespace APITraining.Session3.DataModels
 {
-    internal class PetModel
+    public class PetModel
     {
         [JsonProperty("id")]
         public long Id { get; set; }

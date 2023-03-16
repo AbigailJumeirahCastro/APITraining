@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using APITraining.Session3.DataModels;
+using APITraining.Session3.Helpers;
+using APITraining.Session3.Resources;
 
-namespace APITraining.Session3
+namespace APITraining.Session3.Tests
 {
     [TestClass]
     public class RestSharpTests : BaseTest
@@ -30,7 +26,7 @@ namespace APITraining.Session3
         public async Task PostMethod()
         {
             // Add new pet
-            PetModel petData= await PetHelper.AddNewPet(restClient);
+            PetModel petData = await PetHelper.AddNewPet(restClient);
             cleanUpList.Add(petData);
 
             // Get pet data
